@@ -34,7 +34,7 @@
 
 ### Local Storage Utils Functions -- could be in a separate *storage-utils.js*
 * findById -- reference products lab for this function
-* set Results -- TWO FUNCTIONS
+* setResults -- TWO FUNCTIONS
   * *Encountered* -- 
     * getResults
     * increment pokemonAppear
