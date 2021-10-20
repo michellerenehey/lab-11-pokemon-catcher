@@ -19,7 +19,7 @@
   * update state -- **encounterPokemonr**
   * update view based on state -- render
 * Button Click
-  * increment total plays state -- **pokemonCaught**
+  * increment total plays state -- **totalPlays**
   * increment selected pokemon state -- **capturePokemon**
   * if (plays < 10) 
       * generate three pokemon 
@@ -37,12 +37,12 @@
 * setPokedex -- TWO FUNCTIONS to SEND items to localStorage 
   * *Encountered* -- 
     * getResults
-    * increment pokemonAppear
+    * increment encounterPokemon
     * stringify
     * localStorage.setItem('RESULTS', string)
   * *Selected* -- 
     * getResults
-    * increment pokemonChosen
+    * increment capturePokemon
     * stringify
     * localStorage.setItem('RESULTS', string)
 * getPokedex -- a function to GET items from localStorage 
@@ -58,13 +58,13 @@
   'RESULTS' = [
     {
         id: '',
-        appeared: #,
-        chosen: #
+        encountered: #,
+        captured: #
     },
     {
         id: '',
-        appeared: #,
-        chosen: #
+        encountered: #,
+        captured: #
     },
     ...
 ]```
@@ -81,7 +81,7 @@
 
 
 
-* increment pokemonCaught -- number of plays
+* increment totalPlay -- number of plays
 
 
 
