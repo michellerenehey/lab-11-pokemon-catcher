@@ -4,8 +4,8 @@
 - [ ] Home Page
   - [ ] Three pokemon image buttons/(radios?)
     * need id's to watch event listeners
-  - [ ] Results Page
-- [ ] Render results table?/list?
+- [ ] Results Page
+  - [ ] Render results in a chart
 
 ## State to Keep track of
 - [ ] **totalPlays** -- total plays
@@ -67,7 +67,7 @@
         captured: #
     },
     ...
-]```
+
 
 
 ### home page Functions -- app.js
@@ -79,15 +79,24 @@
   * call Encountered 
   * render image onto page
 
-
-
 * increment totalPlay -- number of plays
 
 
+## RESULTS PAGE! 
+## Html: 
+  * For each item in results: 
+      * Image
+      * Header with name of fruit
+      * Show how many times it’s been shown //encountered
+      * Show how many times it’s been picked  //captured
 
-()[]
+## results.js
+  * Get the data from local storage
+  * Loop through each item in the results
+  * Get it’s data from fruits.js (using findbyID)
+  * Render the results (img, header, data)
 
 
-
+![image](./assets/poke-plan.jpg)
 
 
