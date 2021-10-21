@@ -1,5 +1,5 @@
 import { pokemonList } from './pokemon.js';
-import { findById, getPokedex, encounterPokemon, capturePokemon } from './storageUtils.js';
+import { encounterPokemon } from './storageUtils.js';
 
 const pokeImg1 = document.getElementById('pokemon-1-img'); 
 const pokeImg2 = document.getElementById('pokemon-2-img'); 
