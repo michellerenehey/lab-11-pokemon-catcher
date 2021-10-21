@@ -1,5 +1,5 @@
 // IMPORT MODULES under test here:
-import { getPokedex, encounterPokemon, capturePokemon } from '../storageUtils.js';
+import { getPokedex, encounterPokemon, capturePokemon, setPokedex } from '../storageUtils.js';
 
 const test = QUnit.test;
 
@@ -8,9 +8,9 @@ test('getPokedex returns the key RESULTS from localStorage', (expect) => {
     
     //Arrange
     const results = [
-        { id: 1, encounter: 1, captur: 1 }, 
-        { id: 3, encounter: 2, captur: 1 },
-        { id: 5, encounter: 1, captur: 1 }
+        { id: 1, encounter: 1, capture: 1 }, 
+        { id: 3, encounter: 2, capture: 1 },
+        { id: 5, encounter: 1, capture: 1 }
     ];
     localStorage.setItem('RESULTS', JSON.stringify(results)); 
     
@@ -90,4 +90,22 @@ test('capturePokemon will increment capture', (expect) => {
 
     //expect
     expect.deepEqual(actual, expected); 
+}); 
+
+// TEST 6 setPokedex should strigify & store data
+test('setPokedex should send data up to localStorage', (expect) => {
+    
+    //arrange
+    const results = [
+        { id: 1, encounter: 1, capture: 1 }, 
+        { id: 3, encounter: 2, capture: 1 },
+        { id: 5, encounter: 1, capture: 1 }
+    ];
+    
+    //Act 
+    setPokedex(results);
+    const actual = getPokedex(); 
+
+    //Expect
+    expect.deepEqual(actual, results);
 }); 

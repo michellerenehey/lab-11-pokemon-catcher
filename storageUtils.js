@@ -1,4 +1,4 @@
-// find by ID
+// find by ID function
 export function findById(id, itemList) {
     for (let item of itemList) {
         if (item.id === id){
@@ -7,14 +7,21 @@ export function findById(id, itemList) {
     }
 }
 
-// get pokedex
+// get pokedex function
 export function getPokedex(){
     const resultsString = localStorage.getItem('RESULTS') || '[]'; 
     const results = JSON.parse(resultsString); 
     return results;
 }
 
-// encounter
+// set pokdex function 
+export function setPokedex(results){
+    const resultsString = JSON.stringify(results); 
+    localStorage.setItem('RESULTS', resultsString); 
+}
+
+
+// encounter function
     
     // call getPokedex() 
     // find the matching pokemon (findByID)
@@ -34,7 +41,7 @@ export function encounterPokemon(id){
     localStorage.setItem('RESULTS', resultsString); 
 }
 
-// capture 
+// capture function
 export function capturePokemon(id){
     const results = getPokedex(); 
     const capturedPoke = findById(id, results); 
