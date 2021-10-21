@@ -7,13 +7,6 @@ export function findById(id, itemList) {
     }
 }
 
-// set pokedex
-export function setPokedex(pokemonList){
-    const resultsString = JSON.stringify(pokemonList); 
-    localStorage.setItem('RESULTS', resultsString); 
-
-}
-
 // get pokedex
 export function getPokedex(){
     const resultsString = localStorage.getItem('RESULTS') || '[]'; 
@@ -21,27 +14,33 @@ export function getPokedex(){
     return results;
 }
 
+
 // encounter
     
     // call getPokedex() 
     // find the matching pokemon (findByID)
     // increment encounter (these are shown)
     // localStorage.setItem
-    
+
 export function encounterPokemon(id){
     const results = getPokedex(); 
     const encountered = findById(id, results); 
     if (encountered) {
         encountered.encounter++; 
     } else {
-        const newEncounter = { id: id, encounter: 1, capture: }; 
+        const newEncounter = { id: id, encounter: 1, capture: 0 }; 
         results.push(newEncounter); 
     }
     const resultsString = JSON.stringify(results); 
-    localStorage.setItem('RESULTS', resultsString)
+    localStorage.setItem('RESULTS', resultsString); 
 }
 
 // capture 
 export function capturePokemon(id){
-    // increement what is chosen/preferred/caught
+    const results = getPokedex(); 
+    const captured = findById(id, results); 
+    captured.capture++; 
+    const resultsString = JSON.stringify(results); 
+    localStorage.setItem('RESULTS', resultsString);
 }
+

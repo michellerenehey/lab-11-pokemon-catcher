@@ -1,4 +1,5 @@
 import { pokemonList } from './pokemon.js';
+import { findById, getPokedex, encounterPokemon } from './storageUtils.js';
 
 const pokeImg1 = document.getElementById('pokemon-1-img'); 
 const pokeImg2 = document.getElementById('pokemon-2-img'); 
@@ -24,12 +25,15 @@ const generatePoke = () => {
 
     let poke1 = pokemonList[randNum1]; 
     pokeImg1.src = poke1.url_image; 
+    encounterPokemon(poke1.id); 
 
     let poke2 = pokemonList[randNum2]; 
     pokeImg2.src = poke2.url_image; 
+    encounterPokemon(poke2.id); 
 
     let poke3 = pokemonList[randNum3]; 
     pokeImg3.src = poke3.url_image;
+    encounterPokemon(poke3.id); 
 }; 
 
 generatePoke(); 
