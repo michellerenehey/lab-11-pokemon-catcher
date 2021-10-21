@@ -51,7 +51,7 @@ catchButton.addEventListener('click', () => {
     const chosenRadio = document.querySelector('input[type=radio]:checked'); 
     
     if (chosenRadio){
-        const chosenID = chosenRadio.value;
+        const chosenID = Number(chosenRadio.value); //value comes back string without Number()
         totalPlays++;
         timesPlayedSpan.textContent = `Times played: ${totalPlays}`;
         capturePokemon(chosenID); 

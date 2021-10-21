@@ -37,10 +37,10 @@ export function encounterPokemon(id){
 // capture 
 export function capturePokemon(id){
     const results = getPokedex(); 
-    const captured = findById(id, results); 
-    if (captured) {
-        captured.capture++;
-    }
+    const capturedPoke = findById(id, results); 
+    if (capturedPoke) {
+        capturedPoke.capture++;
+    } 
     const resultsString = JSON.stringify(results); 
     localStorage.setItem('RESULTS', resultsString);
 }
@@ -49,5 +49,3 @@ export function capturePokemon(id){
 // const resultsString = JSON.stringify(results); 
 // localStorage.setItem('RESULTS', resultsString);
 // into it's own function
-
-// after lunch: begin TESTING! 
