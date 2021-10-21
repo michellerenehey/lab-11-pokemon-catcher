@@ -1,5 +1,5 @@
 import { pokemonList } from './pokemon.js';
-import { encounterPokemon } from './storageUtils.js';
+import { capturePokemon, encounterPokemon } from './storageUtils.js';
 
 const pokeImg1 = document.getElementById('pokemon-1-img'); 
 const pokeImg2 = document.getElementById('pokemon-2-img'); 
@@ -8,6 +8,7 @@ const catchButton = document.getElementById('catch-button');
 const pokeRadio1 = document.getElementById('radio-1'); 
 const pokeRadio2 = document.getElementById('radio-2'); 
 const pokeRadio3 = document.getElementById('radio-3'); 
+const timesPlayedSpan = document.getElementById('times-played'); 
 
 const generatePoke = () => {
     let randNum1 = Math.floor(Math.random() * pokemonList.length); 
@@ -47,7 +48,18 @@ let totalPlays = 0;
 generatePoke(); 
 
 catchButton.addEventListener('click', () => {
-    totalPlays++; 
-    generatePoke(); 
+    const chosenRadio = document.querySelector('input[type=radio]:checked'); 
+    
+    if (chosenRadio){
+        const chosenID = chosenRadio.value;
+        totalPlays++;
+        timesPlayedSpan.textContent = `Times played: ${totalPlays}`;
+        capturePokemon(chosenID); 
+        if (totalPlays >= 10){
+            window.location = './results'; 
+        } else {
+            generatePoke(); 
+        }
+    } 
 }); 
 
