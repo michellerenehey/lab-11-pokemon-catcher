@@ -19,3 +19,7 @@ img {
 input[type=radio]:checked + img{
     background-color: pink;
 }
+
+a {
+    margin: 25px;
+}
