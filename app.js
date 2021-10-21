@@ -1,5 +1,5 @@
 import { pokemonList } from './pokemon.js';
-import { findById, getPokedex, encounterPokemon } from './storageUtils.js';
+import { findById, getPokedex, encounterPokemon, capturePokemon } from './storageUtils.js';
 
 const pokeImg1 = document.getElementById('pokemon-1-img'); 
 const pokeImg2 = document.getElementById('pokemon-2-img'); 
@@ -33,11 +33,12 @@ const generatePoke = () => {
 
     let poke3 = pokemonList[randNum3]; 
     pokeImg3.src = poke3.url_image;
-    encounterPokemon(poke3.id); 
+    encounterPokemon(poke3.id);
 }; 
 
 generatePoke(); 
 
 catchButton.addEventListener('click', () => {
     generatePoke(); 
+    // capturePokemon(); id here needs to be id of radio button selected!
 }); 
