@@ -4,7 +4,8 @@ import { findById, getPokedex } from '../storageUtils.js';
 const results = getPokedex(); 
 const resultsHolder = document.getElementById('results-section'); 
 
-for (let item of results){
+
+results.forEach((item) => {
     const pokefriend = findById(item.id, pokemonList); 
 
     const div = document.createElement('div'); 
@@ -23,5 +24,4 @@ for (let item of results){
 
     div.append(pokeName, pokeImg, encounterSpan, captureSpan); 
     resultsHolder.append(div); 
-
-}
+}); 
