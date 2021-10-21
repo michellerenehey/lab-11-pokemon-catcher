@@ -42,3 +42,4 @@ catchButton.addEventListener('click', () => {
     generatePoke(); 
     // capturePokemon(); id here needs to be id of radio button selected!
 }); 
+

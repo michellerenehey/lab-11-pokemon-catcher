@@ -44,3 +44,10 @@ export function capturePokemon(id){
     const resultsString = JSON.stringify(results); 
     localStorage.setItem('RESULTS', resultsString);
 }
+
+// move the 
+// const resultsString = JSON.stringify(results); 
+// localStorage.setItem('RESULTS', resultsString);
+// into it's own function
+
+// get the capture function to work (ta help?)
