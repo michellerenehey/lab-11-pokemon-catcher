@@ -36,10 +36,11 @@ const generatePoke = () => {
     encounterPokemon(poke3.id);
 }; 
 
+let totalPlays = 0;
 generatePoke(); 
 
 catchButton.addEventListener('click', () => {
+    totalPlays++; 
     generatePoke(); 
-    // capturePokemon(); id here needs to be id of radio button selected!
 }); 
 

@@ -38,9 +38,7 @@ export function encounterPokemon(id){
 export function capturePokemon(id){
     const results = getPokedex(); 
     const captured = findById(id, results); 
-    if (captured) {
-        captured.capture++; 
-    } 
+    captured.capture++;
     const resultsString = JSON.stringify(results); 
     localStorage.setItem('RESULTS', resultsString);
 }
@@ -50,4 +48,3 @@ export function capturePokemon(id){
 // localStorage.setItem('RESULTS', resultsString);
 // into it's own function
 
-// get the capture function to work (ta help?)
