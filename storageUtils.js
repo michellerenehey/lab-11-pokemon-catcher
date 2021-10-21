@@ -37,8 +37,7 @@ export function encounterPokemon(id){
         const newEncounter = { id: id, encounter: 1, capture: 0 }; 
         results.push(newEncounter); 
     }
-    const resultsString = JSON.stringify(results); 
-    localStorage.setItem('RESULTS', resultsString); 
+    setPokedex(results); 
 }
 
 // capture function
@@ -48,8 +47,7 @@ export function capturePokemon(id){
     if (capturedPoke) {
         capturedPoke.capture++;
     } 
-    const resultsString = JSON.stringify(results); 
-    localStorage.setItem('RESULTS', resultsString);
+    setPokedex(results);
 }
 
 // move the 
