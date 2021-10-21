@@ -48,3 +48,4 @@ export function capturePokemon(id){
 // localStorage.setItem('RESULTS', resultsString);
 // into it's own function
 
+// after lunch: begin TESTING! try to find prob in capture fucntion...
