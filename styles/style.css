@@ -2,6 +2,16 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-family: 'Bungee Hairline', cursive;
+}
+
+h1 {
+    margin: 5px;
+}
+
+h2 {
+    color: blue;
+    margin: 5px;
 }
 
 #radio-inputs {
@@ -22,4 +32,20 @@ input[type=radio]:checked + img{
 
 a {
     margin: 25px;
+}
+
+a :hover {
+    cursor: pointer;
+}
+
+
+button {
+    background-color: blue; 
+    color: white;
+    font-family: 'Bungee Hairline', cursive;
+    padding: 15px;
+}
+
+button:hover {
+    cursor: pointer;
 }

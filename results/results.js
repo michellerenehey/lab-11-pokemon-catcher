@@ -8,7 +8,8 @@ const resultsHolder = document.getElementById('results-section');
 results.forEach((item) => {
     const pokefriend = findById(item.id, pokemonList); 
 
-    const div = document.createElement('div'); 
+    const pokeCard = document.createElement('div'); 
+    pokeCard.classList.add('pokeCard'); 
 
     const pokeName = document.createElement('h2'); 
     pokeName.textContent = pokefriend.pokemon; 
@@ -22,6 +23,6 @@ results.forEach((item) => {
     const captureSpan = document.createElement('span'); 
     captureSpan.textContent = `Times captured: ${item.capture}`; 
 
-    div.append(pokeName, pokeImg, encounterSpan, captureSpan); 
-    resultsHolder.append(div); 
+    pokeCard.append(pokeName, pokeImg, encounterSpan, captureSpan); 
+    resultsHolder.append(pokeCard); 
 }); 

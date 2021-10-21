@@ -1,0 +1,19 @@
+#results-section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.pokeCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+h2 {
+    color: blue;
+}
+
+a :hover {
+    cursor: pointer;
+}
