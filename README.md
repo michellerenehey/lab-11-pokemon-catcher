@@ -1,25 +1,102 @@
-# Alchemy Bootstrap Template
+# Pokemon Cathcher App
 
-## Making a plan
+## HTML Elements Needed
+- [ ] Home Page
+  - [ ] Three pokemon image buttons/(radios?)
+    * need id's to watch event listeners
+- [ ] Results Page
+  - [ ] Render results in a chart
 
-(bolded steps are mandatory, unbolded are for more advanced projects)
+## State to Keep track of
+- [ ] **totalPlays** -- total plays
+- [ ] **capturePokemon** -- selected button // "pick"
+- [ ] **encounterPokemon** -- the three generated per session // "shown"
 
-1) **Make a drawing of your app. Simple "wireframes"**
-2) **Once you have a drawing, name the HTML elements you'll need to realize your vision**
-3) **For each HTML element ask: Why do I need this?**
-4) Ask which of out HTML elements are hard coded, and which are dynamically generated?
-5) **Once we know _why_ we need each element, think about how to implement the "Why" as a "How"**
-6) Is there some state we need to initialize?
-7) **Find all the 'events' (user clicks, form submit, on load etc) in your app. Ask one by one, "What happens when" for each of these events. Does any state change?**
-8) **Think about how to validate each of your steps**
-9) Ask: should any of this work be abstracted into functions? (i.e., is the work complicated? can it be resused?)
-10) Consider your data model. What objects will you be using? What are the key/value pairs? What arrays do you need? What needs to live in local storage?
-11) **Consider what features _depend_ on what other features. Use this dependency logic to figure out what order to complete tasks.**
+## user events
+* Page Load
+  * update state -- **totalPlays** (total plays = 0)
+  * generate three pokemon 
+  * update state -- **encounterPokemonr**
+  * update view based on state -- render
+* Button Click
+  * increment total plays state -- **totalPlays**
+  * increment selected pokemon state -- **capturePokemon**
+  * if (plays < 10) 
+      * generate three pokemon 
+      * update state -- **encounterPokemon**
+      * update view based on state -- render
+  * else () 
+    * send user to results page
 
 
-## To Run Cypress Tests
-* `npm install`
-* `npm test`
-* Cypress will open -- you should then click "run <#> integration spec(s)"
-    ![](cypress.png)
-* Make sure all tests pass
+## functions
+
+
+### Local Storage Utils Functions -- could be in a separate *storage-utils.js*
+* findById -- reference e-commerce lab for this function
+* setPokedex -- TWO FUNCTIONS to SEND items to localStorage 
+  * *Encountered* -- 
+    * getResults
+    * increment encounterPokemon
+    * stringify
+    * localStorage.setItem('RESULTS', string)
+  * *Selected* -- 
+    * getResults
+    * increment capturePokemon
+    * stringify
+    * localStorage.setItem('RESULTS', string)
+* getPokedex -- a function to GET items from localStorage 
+  * looks for 'RESULTS' in local storage
+  * if ('RESULTS') exists 
+    * localStorage.getItem('RESULTs')
+    * JSON.parse
+    * return results array
+  * else (no 'RESULTS')
+    * return empty array
+
+  ```
+  'RESULTS' = [
+    {
+        id: '',
+        encountered: #,
+        captured: #
+    },
+    {
+        id: '',
+        encountered: #,
+        captured: #
+    },
+    ...
+
+
+
+### home page Functions -- app.js
+
+* generatePokemon function -- 
+  * use array.length and Math.random / Math.floor to **create an index**
+    *  use a while loop to make sure the three random numbers are not the same
+    (rand1 === rand2 || rand2 === rand3 || rand1 === rand3 )
+  * call Encountered 
+  * render image onto page
+
+* increment totalPlay -- number of plays
+
+
+## RESULTS PAGE! 
+## Html: 
+  * For each item in results: 
+      * Image
+      * Header with name of fruit
+      * Show how many times it’s been shown //encountered
+      * Show how many times it’s been picked  //captured
+
+## results.js
+  * Get the data from local storage
+  * Loop through each item in the results
+  * Get it’s data from fruits.js (using findbyID)
+  * Render the results (img, header, data)
+
+
+![image](./assets/poke-plan.jpg)
+
+
