@@ -3,6 +3,7 @@ import { findById, getPokedex } from '../storageUtils.js';
 
 const results = getPokedex(); 
 const resultsHolder = document.getElementById('results-section'); 
+const playAgainBtn = document.getElementById('play-again-button'); 
 
 
 results.forEach((item) => {
@@ -79,6 +80,9 @@ new Chart(ctx, {
     }
 });
 
-
+playAgainBtn.addEventListener('click', () => {
+    localStorage.removeItem('RESULTS'); 
+    window.location.replace('..'); 
+}); 
 
 

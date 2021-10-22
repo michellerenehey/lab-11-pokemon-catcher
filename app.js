@@ -37,36 +37,40 @@ const generatePoke = () => {
     // call encounterPoke function for each 
     // update radio button value on each 
 
+    // creating the pokemon object
+
     let poke1 = pokemonList[randNum1]; 
-    pokeImg1.src = poke1.url_image; 
-    encounterPokemon(poke1.id); 
-    pokeRadio1.value = poke1.id; 
+    let poke2 = pokemonList[randNum2]; 
+    let poke3 = pokemonList[randNum3]; 
+ 
+    // creating the encounter for pokemon objects 
+    encounterPokemon(poke1.id);     
+    encounterPokemon(poke2.id);
+    encounterPokemon(poke3.id);
+ 
+    // calling encounter/capture data from LS 
+    // AFTER we've encountered (above)
+    // otherwise, there's nothing to encounter
     const pokeResults = getPokedex(); 
+
+    // handling the DOM
+    pokeImg1.src = poke1.url_image; 
+    pokeRadio1.value = poke1.id; 
     const poke1Results = findById(poke1.id, pokeResults); 
     const poke1Name = findById(poke1.id, pokemonList); 
     pokeNameSpan1.textContent = poke1Name.pokemon;
     pokeEncSpan1.textContent = `Times encountered: ${poke1Results.encounter}`; 
     pokeCatchSpan1.textContent = `Times captured: ${poke1Results.capture}`; 
-    // add span of encounter? 
-    // add span of capture?
-    // set getPokedex() to a variable (which will hold the array in LS) const = getPokedex()
-    // use findByID() to know which poke are up there
-    // poke.encountered -- update their textContent
-    // poke.captured -- update their textContent
-
-    let poke2 = pokemonList[randNum2]; 
+ 
     pokeImg2.src = poke2.url_image; 
-    encounterPokemon(poke2.id); 
     pokeRadio2.value = poke2.id; 
     const poke2Results = findById(poke2.id, pokeResults); 
     const poke2Name = findById(poke2.id, pokemonList); 
     pokeNameSpan2.textContent = poke2Name.pokemon;
     pokeEncSpan2.textContent = `Times encountered: ${poke2Results.encounter}`; 
     pokeCatchSpan2.textContent = `Times captured: ${poke2Results.capture}`; 
-
-    let poke3 = pokemonList[randNum3]; 
+     
     pokeImg3.src = poke3.url_image;
-    encounterPokemon(poke3.id);
     pokeRadio3.value = poke3.id; 
     const poke3Results = findById(poke3.id, pokeResults); 
     const poke3Name = findById(poke3.id, pokemonList); 

@@ -49,3 +49,10 @@ button {
 button:hover {
     cursor: pointer;
 }
+
+.pokemon-picker {
+    display: flex; 
+    flex-direction: column;
+    text-align: center;
+    margin: 20px;
+}
