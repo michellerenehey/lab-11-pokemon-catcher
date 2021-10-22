@@ -32,16 +32,22 @@ const generatePoke = () => {
     pokeImg1.src = poke1.url_image; 
     encounterPokemon(poke1.id); 
     pokeRadio1.value = poke1.id; 
+    // add span of encounter? 
+    // add span of capture?
 
     let poke2 = pokemonList[randNum2]; 
     pokeImg2.src = poke2.url_image; 
     encounterPokemon(poke2.id); 
     pokeRadio2.value = poke2.id; 
+    // add span of encounter? 
+    // add span of capture?
 
     let poke3 = pokemonList[randNum3]; 
     pokeImg3.src = poke3.url_image;
     encounterPokemon(poke3.id);
     pokeRadio3.value = poke3.id; 
+    // add span of encounter? 
+    // add span of capture?
 }; 
 
 let totalPlays = 0;

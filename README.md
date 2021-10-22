@@ -1,4 +1,4 @@
-# Pokemon Cathcher App
+# Pokemon Catcher App
 
 ## HTML Elements Needed
 - [ ] Home Page
@@ -100,3 +100,21 @@
 ![image](./assets/poke-plan.jpg)
 
 
+# stretch goal
+
+## "As the user is playing, display captures and encounters for each pokemon below each pokemon image"
+
+* This information is stored in local storage 
+* This will show on button-click 
+* So, on button click, go get the information from LS about encouters & captures, and show that information in a span 
+
+### plan: 
+  * add two ```<span>``` elements to each radio button, one for encounter and one for capture
+  * on the button click, 3 images are shown. each of these has information that is being stored in LS (id, encouter, capture). 
+  * we want to expand what is shown on the button click: we want to grab the encounter and the capture that is in LS and display it in the span elements of each of the pokeCards. 
+  * i think this happens in the generatePoke() app (and not on the button click itself?)
+
+- [ ] add html span for encounter on radio button
+- [ ] add html span for capture on radio button
+- [ ] grab spans in app.js
+- [ ] 
