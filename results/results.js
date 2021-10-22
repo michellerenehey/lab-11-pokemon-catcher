@@ -41,7 +41,7 @@ const arrayOfPokemonEncountered = results.map(item => item.encounter);
 
 var ctx = document.getElementById('resultsChart').getContext('2d');
 // eslint-disable-next-line no-undef
-var myChart = new Chart(ctx, {
+new Chart(ctx, {
     type: 'bar',
     data: {
         labels: arrayOfPokemonNames,
