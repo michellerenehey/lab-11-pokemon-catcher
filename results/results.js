@@ -46,18 +46,20 @@ var myChart = new Chart(ctx, {
     data: {
         labels: arrayOfPokemonNames,
         datasets: [{
+                type: 'line',
                 label: 'Times Captured',
                 data: arrayOfPokemonCaptured,
-                backgroundColor: 'rgb(118, 190, 208)', // the key
-                borderColor: 'rgb(118, 190, 208)', // the line
-                pointBorderColor: 'rgb(245, 93, 62)', // border of dot
-                pointBackgroundColor: 'rgb(245, 93, 62)', // fill of dot
+                backgroundColor: 'rgb(78, 20, 140)', // the key
+                borderColor: 'rgb(78, 20, 140)', // the line
+                pointBorderColor: 'rgb(193,184,200)', // border of dot
+                pointBackgroundColor: 'rgb(193,184,200)', // fill of dot
                 borderWidth: 2, 
                 hoverBorderWidth: 2, 
                 hoverBorderColor: '#000', 
-                type: 'line'
+
         }, 
         {
+                type: 'bar', 
                 label: 'Times Encountered', 
                 data: arrayOfPokemonEncountered, 
                 backgroundColor: 'rgb(247, 203, 21)',
