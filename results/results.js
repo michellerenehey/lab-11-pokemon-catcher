@@ -1,3 +1,4 @@
+
 import { pokemonList } from '../pokemon.js'; 
 import { findById, getPokedex } from '../storageUtils.js'; 
 
@@ -84,5 +85,6 @@ playAgainBtn.addEventListener('click', () => {
     localStorage.removeItem('RESULTS'); 
     window.location.replace('..'); 
 }); 
+
 
 
