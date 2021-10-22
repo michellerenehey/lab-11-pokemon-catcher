@@ -114,7 +114,7 @@
   * we want to expand what is shown on the button click: we want to grab the encounter and the capture that is in LS and display it in the span elements of each of the pokeCards. 
   * i think this happens in the generatePoke() app (and not on the button click itself?)
 
-- [ ] add html span for encounter on radio button
+- [x] add html span for encounter on radio button
 - [ ] add html span for capture on radio button
 - [ ] grab spans in app.js
-- [ ] 
+- [ ] update content of span to be the encounter/capture data in LS

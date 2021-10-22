@@ -9,6 +9,12 @@ const pokeRadio1 = document.getElementById('radio-1');
 const pokeRadio2 = document.getElementById('radio-2'); 
 const pokeRadio3 = document.getElementById('radio-3'); 
 const timesPlayedSpan = document.getElementById('times-played'); 
+const pokeEnSpan1
+const pokeEnSpan2
+const pokeEnSpan3
+const pokeCatchSpan1 
+const pokeCatchSpan2
+const pokeCatchSpan3
 
 const generatePoke = () => {
     let randNum1 = Math.floor(Math.random() * pokemonList.length); 
@@ -34,6 +40,10 @@ const generatePoke = () => {
     pokeRadio1.value = poke1.id; 
     // add span of encounter? 
     // add span of capture?
+    // set getPokedex() to a variable (which will hold the array in LS) const = getPokedex()
+    // use findByID() to know which poke are up there
+    // poke.encountered -- update their textContent
+    // poke.captured -- update their textContent
 
     let poke2 = pokemonList[randNum2]; 
     pokeImg2.src = poke2.url_image; 
