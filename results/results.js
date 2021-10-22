@@ -36,10 +36,11 @@ const arrayOfPokemonNames = results.map((item) => {
 
 const arrayOfPokemonCaptured = results.map(item => item.capture);
 
-const arrayOfPokemonEncountered = results.map(item => item.encounter)
+const arrayOfPokemonEncountered = results.map(item => item.encounter); 
 
 
 var ctx = document.getElementById('resultsChart').getContext('2d');
+// eslint-disable-next-line no-undef
 var myChart = new Chart(ctx, {
     type: 'bar',
     data: {
