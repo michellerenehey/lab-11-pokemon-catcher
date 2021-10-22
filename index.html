@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Hairline&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
     <!-- Stylesheets -->
     <link rel="stylesheet" href="./styles/reset.css">
@@ -15,20 +18,30 @@
 </head>
 
 <body>
-    <h1>Welcome to the Pokemon Catcher</h1>
+    <h1>Welcome to Pokemon Catcher</h1>
     <h2>A game you can play even if you don't know how!</h2>
+    <p>Click the cutest pic below, then click "catch one"! </br> You can play 10 times, then you'll see your results.</p>
     <section id="radio-inputs">
         <label class="pokemon-picker">
             <input name="pokemon-choice" type="radio" id="radio-1">
             <img id="pokemon-1-img">
+            <span id="pokemon-1-name-span"></span>
+            <span id="pokemon-1-encounter-span"></span>
+            <span id="pokemon-1-capture-span"></span>
         </label>
         <label class="pokemon-picker">
             <input name="pokemon-choice" type="radio" id="radio-2">
             <img id="pokemon-2-img">
+            <span id="pokemon-2-name-span"></span>
+            <span id="pokemon-2-encounter-span"></span>
+            <span id="pokemon-2-capture-span"></span>            
         </label>
         <label class="pokemon-picker">
             <input name="pokemon-choice" type="radio" id="radio-3">
             <img id="pokemon-3-img">
+            <span id="pokemon-3-name-span"></span>
+            <span id="pokemon-3-encounter-span"></span>
+            <span id="pokemon-3-capture-span"></span>
         </label>
     </section>
     <button id="catch-button">Catch one!</button>
